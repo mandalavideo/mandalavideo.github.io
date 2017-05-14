@@ -25,7 +25,7 @@ $(document).ready(function () {
             items: 1
           },
           568: {
-            items: 2
+            items: 1
           },
           600: {
             items: 3
@@ -97,6 +97,28 @@ $(document).ready(function () {
         }
       })
 
+        
+        $('#infoo').owlCarousel({
+        autoplay: true,
+        loop:true,
+        animateOut: 'fadeOut',
+        autoHeight:true,
+        dots: true,
+        navigation:false,
+        autoplayHoverPause: true, 
+        responsive:{ 
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+      })
+
     }
   });
 });
@@ -132,6 +154,7 @@ $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
+  .not('[href^="#stacked"]')
   .click(function(event) {
     // On-page links
     if (
@@ -142,23 +165,15 @@ $('a[href*="#"]')
       // Figure out element to scroll to
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      console.log(target.offset())
       // Does a scroll target exist?
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 80
         }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
+
         });
       }
     }
@@ -183,11 +198,226 @@ $contactForm.submit(function(e) {
 		},
 		error: function(err) {
 			$contactForm.find('.alert--loading').hide();
-			$contactForm.append('<div class="alert alert-error">Ops, there was an error.</div>');
+			$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
 		}
 	});
 });
 
+
+
+
+jQuery(document).ready(function($){
+	var latitude = 42.6886591,
+		longitude = 2.8948331999999937,
+		map_zoom = 6;
+	var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+	var marker_url = ( is_internetExplorer11 ) ? 'http://gdurl.com/Uibp' : 'http://gdurl.com/kVn2';
+	var	main_color = '#0085a1', 
+		saturation_value= -20,
+		brightness_value= 5;
+	var style= [ 
+		{
+			elementType: "labels",
+			stylers: [
+				{saturation: saturation_value}
+			]
+		},  
+	    {
+			featureType: "poi",
+			elementType: "labels",
+			stylers: [
+				{visibility: "off"}
+			]
+		},
+		{
+	        featureType: 'road.highway',
+	        elementType: 'labels',
+	        stylers: [
+	            {visibility: "off"}
+	        ]
+	    }, 
+		{
+			featureType: "road.local", 
+			elementType: "labels.icon", 
+			stylers: [
+				{visibility: "off"} 
+			] 
+		},
+		{
+			featureType: "road.arterial", 
+			elementType: "labels.icon", 
+			stylers: [
+				{visibility: "off"}
+			] 
+		},
+		{
+			featureType: "road",
+			elementType: "geometry.stroke",
+			stylers: [
+				{visibility: "off"}
+			]
+		},
+		{ 
+			featureType: "transit", 
+			elementType: "geometry.fill", 
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		}, 
+		{
+			featureType: "poi",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "poi.government",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "poi.sport_complex",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "poi.attraction",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "poi.business",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "transit",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "transit.station",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "landscape",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+			
+		},
+		{
+			featureType: "road",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "road.highway",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		}, 
+		{
+			featureType: "water",
+			elementType: "geometry",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		}
+	];
+	var map_options = {
+      	center: new google.maps.LatLng(latitude, longitude),
+      	zoom: map_zoom,
+      	panControl: false,
+      	zoomControl: true,
+      	mapTypeControl: false,
+      	streetViewControl: false,
+      	mapTypeId: google.maps.MapTypeId.ROADMAP,
+      	scrollwheel: false,
+      	styles: style,
+		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.SMALL,
+			position: google.maps.ControlPosition.BOTTOM_CENTER
+		}
+    }
+	var map = new google.maps.Map(document.getElementById('map'), map_options);			
+	var perpignan = new google.maps.Marker({
+	  	position: new google.maps.LatLng(latitude, longitude),
+	    map: map,
+	    visible: true
+	});
+  var montpellier = new google.maps.Marker({
+    position: new google.maps.LatLng(43.610769, 3.8767159999999876),
+    map: map,
+    visible: true
+  });
+  var barcelone = new google.maps.Marker({
+    position: new google.maps.LatLng(41.38506389999999, 2.1734034999999494),
+    map: map,
+    visible: true
+  });
+  var gerone = new google.maps.Marker({
+    position: new google.maps.LatLng(41.95949, 2.827606),
+    map: map,
+    visible: true
+  });
+  
+
+});
+ 
   
 
 
