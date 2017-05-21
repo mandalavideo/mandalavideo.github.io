@@ -5,8 +5,9 @@ $(document).ready(function () {
     url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=" + playlistId + "&key=" + apiKey,
     success: function (data) {
       $(data.items).each(function (i) {
-        $("#portfolio").append('<div class="modalButton" data-toggle="modal" data-src="https://www.youtube.com/embed/'+data.items[i].snippet.resourceId.videoId+'?autoplay=1" data-width="960" data-height="541" data-target="#modalVideo">' +
+        $("#portfolio").append('<div class="modalButton view view-first" data-toggle="modal" data-src="https://www.youtube.com/embed/'+data.items[i].snippet.resourceId.videoId+'?autoplay=1" data-width="960" data-height="541" data-target="#modalVideo">' +
           '<img src="'+data.items[i].snippet.thumbnails.high.url+'" alt="'+data.items[i].snippet.title+'">'+
+					'<div class="mask"><h2>'+data.items[i].snippet.title+'</h2><svg version="1.1" id="playyoutube" style="margin-top:40px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px" viewbox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> <path class="stroke-solid" fill="none" stroke="white" d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7 C97.3,23.7,75.7,2.3,49.9,2.5"></path><path class="stroke-dotted" fill="none" stroke="white" d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7 C97.3,23.7,75.7,2.3,49.9,2.5"></path><path class="icon" fill="white" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"></path></svg></div>'+
         '</div>');
       });
  
@@ -79,6 +80,7 @@ $(document).ready(function () {
         $('#avis').owlCarousel({
         autoplay: true,
         loop:true,
+				nav: true,
         animateOut: 'fadeOut',
         autoHeight:true,
         dots: false,
@@ -393,29 +395,22 @@ jQuery(document).ready(function($){
 			position: google.maps.ControlPosition.BOTTOM_CENTER
 		}
     }
-	var map = new google.maps.Map(document.getElementById('map'), map_options);			
+	var map = new google.maps.Map(document.getElementById('map'), map_options);		
+
 	var perpignan = new google.maps.Marker({
 	  	position: new google.maps.LatLng(latitude, longitude),
 	    map: map,
 	    visible: true
 	});
-  var montpellier = new google.maps.Marker({
-    position: new google.maps.LatLng(43.610769, 3.8767159999999876),
-    map: map,
-    visible: true
-  });
-  var barcelone = new google.maps.Marker({
-    position: new google.maps.LatLng(41.38506389999999, 2.1734034999999494),
-    map: map,
-    visible: true
-  });
-  var gerone = new google.maps.Marker({
-    position: new google.maps.LatLng(41.95949, 2.827606),
-    map: map,
-    visible: true
-  });
-  
-
+	var area=new google.maps.Circle({
+					map: map,
+					center: map.getCenter(),
+					clickable:false,
+					radius: 165000,
+					fillColor:'#cdd226',
+					strokeWeight: 0,
+					fillOpacity:0.5
+		});		
 });
  
   
