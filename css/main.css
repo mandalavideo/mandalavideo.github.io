@@ -6390,8 +6390,7 @@ body {
 
 .section.citation {
   background-color: rgba(30, 30, 30, 0.97);
-  padding: 3px 0;
-  height: 65px; }
+  padding: 3px 5px; }
 
 .section.citation h3 {
   opacity: 0.9;
@@ -6478,23 +6477,6 @@ body {
   transform-origin: 50% 50%;
   transition: transform 200ms ease-out; }
 
-#play:hover .stroke-dotted {
-  stroke-width: 4px;
-  opacity: 1; }
-#play:hover .stroke-solid {
-  opacity: 0;
-  stroke-dashoffset: 300; }
-#play:hover .icon {
-  transform: scale(1.05); }
-
-#play {
-  margin-top: 35px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%); }
-
 /*
 SLIDER PORTFOLIO
 */
@@ -6554,6 +6536,9 @@ SLIDER PORTFOLIO
 .fade-enter, .fade-leave-to {
   opacity: 0; }
 
+@media (max-width: 600px) {
+  .prestaop .card .image {
+    height: 340px; } }
 .card-background .title {
   margin-top: 10px; }
 
@@ -6653,6 +6638,31 @@ SLIDER PORTFOLIO
   margin: auto;
   color: #fff; }
 
+#play:hover .stroke-dotted {
+  stroke-width: 4px;
+  opacity: 1; }
+#play:hover .stroke-solid {
+  opacity: 0;
+  stroke-dashoffset: 300; }
+#play:hover .icon {
+  transform: scale(1.05); }
+
+#play {
+  margin-top: 35px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); }
+
+@media (max-width: 600px) {
+  #play {
+    width: 80px;
+    height: 80px;
+    margin-top: 15px; }
+
+  .motto {
+    font-size: 35px; } }
 /* / VIDEO */
 /* MODAL JS */
 .headerButton {
@@ -6692,9 +6702,9 @@ SLIDER PORTFOLIO
 .modal-backdrop {
   opacity: 0.9 !important; }
 
-.modal-dialog {
-  width: 920px; }
-
+@media (min-width: 900px) {
+  .modal-dialog {
+    width: 920px; } }
 .modal-offre {
   padding: 0; }
 
