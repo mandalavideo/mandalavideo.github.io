@@ -1,31 +1,1458 @@
----
-layout: default
-ref: index
-lang: fr
----
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="home">
+  <title>MANDALAVIDEO | Production audiovisuelle</title> 
+  <meta name="description" content="Société vidéo professionnelle. Productions uniques et originales. Des offres exclusives à des prix abordables. Variété de services. À Barcelona, Girona, Perpignan et Montpellier.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <h1 class="page-heading">Articles</h1>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://mandalavideo.com/assets/images/mandalavideo.png/"/>
+  <metaproperty="og:title" content="MANDALAVIDEO | Production audiovisuelle"/>
+  <meta property="og:description" content="Société vidéo professionnelle. Productions uniques et originales. Des offres exclusives à des prix abordables. Variété de services. À Barcelona, Girona, Perpignan et Montpellier."/>
 
-{% assign cookies=site.cookies | where:"lang", page.lang %}
-{% for cookie in cookies %}
-    {{cookie.title}}
-{% endfor %}
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.css" rel="stylesheet" />
 
-  <ul class="post-list">
-    {% assign posts=site.posts | where:"lang", page.lang %}
-    {% for post in posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <link rel="stylesheet" href="/css/main.css">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu|Montserrat:400,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
-  <p class="rss-subscribe">suivre le <a href="{{ "/flux.xml" | prepend: site.baseurl }}">flux RSS</a></p>
+</head>
+
+  <body>
+    <section class="masthead">
+    <video class="masthead-video" autoplay loop muted poster="/assets/images/header/poster.jpg">
+        <source src="/assets/video/header_bg.mp4" type="video/mp4">
+        <source src="/assets/video/header_bg.webm" type="video/webm">
+    </video>
+    <div class="masthead-overlay"></div>
+    <div class="masthead-arrow"></div>
+
+    <nav class="navbar navbar-ct-black navbar-transparent navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menu-toggle" type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar bar1"></span>
+              <span class="icon-bar bar2"></span>
+              <span class="icon-bar bar3"></span>
+            </button>
+                <a class="navbar-brand" href="">mandala<b>video</b></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li>
+                        <a href="#service">Services</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#prestaop">Prestacion Op</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#offres">Offres</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#portfolioo">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#info">Info</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#aviss">Avis</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+    
+        <li>
+            <a href="https://www.facebook.com/productoramandalavideo/">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+        </li>   
+    
+        <li>
+            <a href="https://www.instagram.com/mandalavideo/">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>   
+    
+        <li>
+            <a href="https://vimeo.com/user3161025">
+                <i class="fa fa-vimeo"></i>
+            </a>
+        </li>   
+    
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" aria-expanded="false">
+            
+                fr
+             
+
+        <b class="caret"></b>
+        </a>
+
+        <ul class="dropdown-menu">
+            
+                <li><a href="/en/index.html?lang=en">EN</a></li>
+            
+                <li><a href="/ca/index.html?lang=ca">CAT</a></li>
+            
+                <li><a href="/es/index.html?lang=es">ES</a></li>
+            
+        </ul>
+
+    </li> 
+</ul>  
+            </div>
+
+        </div>
+
+    </nav> 
+    <div class="motto">
+         Voir le showreel <br>
+        <svg version="1.1" class="modalButton" id="play" data-toggle="modal" data-src="https://www.youtube.com/embed/cJg5NWu3fUc?autoplay=1" data-width="960"
+            data-height="541" data-target="#modalVideo" data-video-fullscreen=""  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            height="100px" width="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+            <path class="stroke-solid" fill="none" stroke="white" d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+    C97.3,23.7,75.7,2.3,49.9,2.5" />
+            <path class="stroke-dotted" fill="none" stroke="white" d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+    C97.3,23.7,75.7,2.3,49.9,2.5" />
+            <path class="icon" fill="white" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+            />
+        </svg>
+
+     
+</section>
+    <div class="section citation section-gray">
+    
+        <h3 class="motivation">Le contenu vidéo va générer les ¾ du trafic web les prochaines années.</h3>
+    
+        <h3 class="motivation">500 millions d’utilisateurs Facebook regardent chaque jour 8 Milliards de vidéos.</h3>
+    
+        <h3 class="motivation">Il y a plus de vidéos mises en ligne sur internet en un mois que la somme des productions télévisées en 30 ans.</h3>
+    
+</div>   
+    <div class="section intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                 <h2 class="section-title">mandala<b>video</b></h2><br>
+                <p>Le Mandala est la représentation symbolique du cosmos. Sa forme concentrique suggère l'idée de la perfection et évoque le retour immuable des cycles de la nature.</p> <p>C'est avant tout un cosmogramme, une projection géométrique de l'univers entier concentré dans un schéma élémentaire.</p> <p><b>Sur cette base, Mandala Vidéo place votre idée au centre de ce tourbillon d'éléments, de couleurs et de sons pour vous offrir un résultat surprenant.</b></p>
+             </div>
+            <div class="col-md-3">
+                <img src="/assets/images/logo_noir.png" alt="">
+            </div>
+        </div>
+    </div>
+</div> 
+    <div class="section">
+    <div class="container">
+        <h2 class="section-title" id="service">Services</h2>
+        <div class="services">
+            <div class="row">
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/sportif_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/sportif_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Faites la promotion de votre marque ou sponsor, personnages publics, nouveautés, événements, défis, etc. Idéal pour les athlètes, marques et sponsors, entreprises de loisirs et pôles de formations sportifs.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Sportif</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/promotionel_mini.jpg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/promotionel_mini.jpg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Pour la promotion et la publicité de votre entreprise. Des modèles standards à productions innovantes et créatives. Conçu spécialement pour les entreprises, hôtels, campings, restaurants, offices de tourisme … 
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Promotionnel</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/clips_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/clips_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Idéal pour la vente ou la promotion d’une chanson. Renforce l’image de l’artiste ou du groupe. À l'attention des musiciens, compagnies de spectacles, …
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Clip musical</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/lifestyle_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/lifestyle_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                “Lifestyle” c’est un service exclusif pour un public très spécifique. Idéal pour personnes ou couples entre 20 et 40 ans, le but est de filmer une partie de son style de vie dans un moment d’immense splendeur.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">“Lifestyle”</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/voyage_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/voyage_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Idéal pour agences et sites de voyage, ce service met en valeur les destinations à travers l’outil vidéo, que ce soit pour augmenter les ventes de ses livres et publications comme pour gagner de nouveaux clients. 
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Voyage</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/teaser_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/teaser_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Utilisez le format Teaser pour la vente/promotion d’un produit ou service. De courte durée (entre 20 et 45”). Idéal pour la diffusion sur reseaux sociaux.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Teaser</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/docu_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/docu_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Pour exprimer un aspect de la réalité à travers la vidéo, ce service englobe les modalités les plus variées selon la thématique et la cible.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Documentaire</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/personalise_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/personalise_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Vous n’avez pas trouvé votre bonheur dans la liste précédente ? Vous avez une demande particulière ? Expliquez vos souhaits, nous réfléchirons ensemble à leur réalisation.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Personnalisé</h1>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="container prestaop">
+        <h2 class="section-title" id="prestaop">Prestation Opérateur</h2>
+        <div class="services"> 
+            <div class="row"> 
+              
+                <div class="col-md-6">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/drone.jpg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/drone.jpg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                La vidéo aérienne vous permet d’accéder à des endroits inaccessibles et de créer des nouveaux récits. Idéal pour tous les types de productions vidéo. Captez des images aériennes professionnelles en totale sécurité. Un pilote qualifié (titulaire du diplôme de pilotage) avec des expertises en tournages vous renseignera sur les possibilités logistiques et créatives pour vos projets.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Opérateur <b>drone</b></h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-6">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/camera.jpg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/camera.jpg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Profitez les compétences d’un opérateur vidéo pour des tournages où vous avez besoin d’externaliser ce genre de prestation. Pour tous les types de productions vidéo, avec matériel au choix et totalement autonome. Expert en steadycam et tournages en exterieurs. Ce service est offert pour une demi-journée ou journée entière.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Opérateur <b>caméra</b></h1>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+
 
 </div>
+    <div class="section section-gray" style="padding-bottom:0;">
+    <div class="container">
+        <h2 class="section-title" id="offres">Offres promotionnelles</h2> 
+        <div class="offres">
+            <div class="row owl-carousel owl-theme"  id="price-cards" >
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Promo</h6>
+                            <h1 class="price">
+                                <small>€</small>1450
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Promo</b> est une offre destinée à tous les types d’entreprises ou personnes qui souhaitent promouvoir leurs activités à travers l’outil vidéo, d’une manière simple, professionnelle et peu coûteuse.<br><br>
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Tournage</b> 2 journées
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Livraison</b> 10 jours
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durée</b> 3' (indicatif)
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Promo">
+                                en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Real Estate</h6>
+                            <h1 class="price">
+                                <small>€</small>650
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Real Estate</b> est une offre crée pour tous les types d’agences immobilières qui souhaitent faciliter la vente ou la location d’un immeuble à travers l’outil vidéo, d’une façon dynamique et descriptive.
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Tournage</b> 1 journée
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Livraison</b> 10 jours
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durée</b> 1'30 (indicatif)
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Real">
+                                en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Hotel</h6>
+                            <h1 class="price">
+                                <small>€</small>750
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Hotel</b> est une offre dédiée aux chaînes hôtelières qui souhaitent créer une image globale propre à travers l’outil vidéo. Un service avec deux résultats.<br><br><br>
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Tournage</b> 2 journées
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Livraison</b> A definir
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durée</b> 1'30/ 3'
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Hotel">
+                                en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Outdoors</h6>
+                            <h1 class="price">
+                                <small>€</small>850
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Outdoors</b> est une offre conçue pour toute personne qui aime et souhaite partager sa passion pour le sport à travers la vidéo. <br><br><br><br>
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Tournage</b> 2 journées
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Livraison</b> À définir
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durée</b> 2'30 (indicatif)
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Outdoors">
+                                en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Phénix</h6>
+                            <h1 class="price">
+                                <small>€</small>250
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Phénix</b> est une offre destinée à toute personne qui souhaite avoir une photographie de sa propriété depuis le ciel. <br><br><br><br>
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Tournage</b> 1/2 journée
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Livraison</b> Entre 5 et 10 jours.
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durée</b> --
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Fénix">
+                                en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                
+                
+            </div>
+        </div>
+        <h2 class="section-title" id="portfolioo">Portfolio</h2>
+    </div>
+</div>  
+    <div class="owl-carousel" id="portfolio"></div>
+   
+    <div class="section">
+    <div class="container">
+        <h2 class="section-title" id="info">Info</h2>
+        <div class="row">
+
+            <div class="col-md-7">
+                <div class="owl-carousel owl-theme" id="infoo">
+                    <div class="img-container item" style="margin-bottom:10px;">
+                    <img src="/assets/images/carles/1.jpg" alt="Rounded Image" class="img-rounded">
+                    </div>
+                    <div class="img-container item" style="margin-bottom:10px;">
+                        <img src="/assets/images/carles/2.jpg" alt="Rounded Image" class="img-rounded">
+                    </div>
+                    <div class="img-container item" style="margin-bottom:10px;">
+                        <img src="/assets/images/carles/3.jpg" alt="Rounded Image" class="img-rounded">
+                    </div>
+                    <div class="img-container item" style="margin-bottom:10px;">
+                        <img src="/assets/images/carles/4.jpg" alt="Rounded Image" class="img-rounded">
+                    </div>
+                </div>
+    <div class="space-50"></div> 
+            </div> 
+            
+            <div class="col-md-5">
+                <h2 class="text-center">Carles López</h2>
+                <hr>
+                <p>Réalisateur, créatif. Passionné par le mouvement et l’harmonie. Multilingue (Catalan, espagnol, français et anglais). Fasciné par les sports extrêmes, la nature, le cinéma, la musique et la philosophie.</p> <p>Expert dans le développement de projets audiovisuels pour tous les types d’entreprises et particuliers. Présent pendant chaque phase de la production audiovisuelle.</p>
+             </div>
+        </div>
+    </div>
+
+<section class="section section-gray">
+    <div class="container info">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="space-50"></div>
+                <h3>Collaborateurs</h3>
+                <p>Travail en collaboration avec des professionnels du secteur : </p>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="illustration - Graphiques d'animation et de mouvement - VFX - Son et Soundtrack (quarantados.com)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/0.jpg" alt="Quarantados">
+                            <h4 class="title">Quarantados</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Réalisateur - DOP (inbluefilms.com)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/1.jpg" alt="Martin <br>Gonzalez">
+                            <h4 class="title">Martin <br>Gonzalez</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Réalisateur - photographe (paulopez.es)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/2.jpg" alt="Pau <br>Lopez">
+                            <h4 class="title">Pau <br>Lopez</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Photographe (thibaut-marot.fr)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/3.jpg" alt="Thibaut <br>Marot">
+                            <h4 class="title">Thibaut <br>Marot</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Pilote drone - responsable technique (hemav.com)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/4.jpg" alt="Pau <br>Mateo">
+                            <h4 class="title">Pau <br>Mateo</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Réalisateur - pilote de drone - cadreur">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/5.jpg" alt="Oscar <br>Mendoza">
+                            <h4 class="title">Oscar <br>Mendoza</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Réalisateur - cadreur (nor-b.net)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/6.jpg" alt="Norbe <br>Fernandez">
+                            <h4 class="title">Norbe <br>Fernandez</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Directeur artistique - communication">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/7.jpg" alt="Xavi <br>Oribe">
+                            <h4 class="title">Xavi <br>Oribe</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Réalisatrice - documentariste - cadreuse">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/8.jpg" alt="Noémie <br>Roche">
+                            <h4 class="title">Noémie <br>Roche</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Réalisateur - documentariste - cadreur (bitakorafilms.com)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/9.jpg" alt="Xavier <br>Sureda">
+                            <h4 class="title">Xavier <br>Sureda</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+
+</div>
+</div> 
+    <div class="container">
+    <h2 class="section-title" id="aviss">Avis</h2>
+    <div class="owl-carousel owl-theme" id="avis">
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/etiennehanneforth.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>Nous (Nagel-Group) et Mr. Lopez  avons eu une collaboration professionnelle ces dernières années. J’aimerais témoigner du professionnalisme et de la flexibilité de Mr. Lopez à chaque occasion.</p>
+                        <small><b>Etienne Hanneford</b> (Key Account Manager Nagel-group)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/ariadnaferrer.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>Des Personnes qui veulent travailler, il y en a beaucoup, des personnes disposées à le faire, peu. Et la différence est colossale. Carles fait partie des seconds et ça s'est singulièrement noté lorsque nous avons travaillé ensemble, malgré la mer qui nous séparait.</p>
+                        <small><b>Ariadna Ferrer</b> (Coordinatrice / Editrice Arrela)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/guillemsalles.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>Carles est un professionnel consciencieux,<br> appliqué et talentueux. Son sens de l’écoute client, de la scénarisation et du storytelling complètent à merveille sa technique de prise de vue, rendant sa réalisation vidéo impactante et dynamique.</p>
+                        <small><b>Guillem Salles</b> (Chef de projet e-learning Programme MIRO)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/martavilar.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>Je ne connaissais pas Carles López. C’est grâce à une de ses vidéos que je l’ai connu : un jour par facebook je vois la vidéo La Cauna (escalade) et me dis : « Le jour où j’ai besoin de  filmer un évènement Climbyoga, il en sera le réalisateur. Et c’est arrivé. Non seulement, il a accepté, ravi mais en plus, il s’est finalement impliqué dans un projet commun avec le grand Chris Sharma. Non seulement, il a été à la hauteur mais en plus son style s’est reflété dans le résultat final. Faites-lui confiance et vos vidéos auront du succès, et vous en profiterez !</p>
+                        <small><b>Marta Vilar</b> (Communauté Climbyoga / Projet Pinkmama)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/alexisvillar.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p><b>Projet Sinapsis :</b> <br> Définitivement le projet a été créé avec une ambition mutuelle de faire les meilleures images possibles pendant le tournage. Il faut souligner que Carles  a été toujours disposé à donner le meilleur de son coté, avec une parfaite organisation tant sur les repérages que sur les autorisations de tournage. Bien évidement j’ai été très surpris par la qualité du montage vidéo final. La somme des petits détails le rend parfait. <br> <b>Projet Paleotraining Banyoles :</b> <br> Nous avions besoin d’images qui reflètent une forte relation entre le mouvement de l’être  humain et la nature. Nous nous sommes laissés guider par Carles pendant 5 heures grâce à ses propositions pour transformer en clichés nos images mentales. Le résultat il a été spectaculaire. Plusieurs de ses images sont en train d’être utilisées par la marque pour compléter l’application “iPaleo”  qu’utilisent  des usagers à travers le monde entier.</p>
+                        <small><b>Alexis Villar</b> (Coach sportif / Directeur Entrenament Funcional / Paleotraining Banyoles)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+    </div>
+ </div> 
+    <div class="container">
+    <div class="owl-carousel owl-theme" id="client">
+        
+            <div>
+                <img src="/assets/images/client/exp/sharma.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/paleo_training.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/nagel_group.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/delbondio.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/grimper.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/entrenament_funcional.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/miro.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/climbyoga.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/upvd.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/natura_loisirs.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/perishable_center.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/armangue.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/custodia_agraria.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/gob_menorca.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/iaden.png" alt="">
+            </div>
+        
+    </div>
+</div>
+    <section class="section section-gray">
+    <div class="container">
+        <h2 class="section-title" id="contact">Contact</h2>
+        <br>
+        <br>  
+    </div> 
+    <div id="map"></div>
+    <h4 class="text-center">Barcelone - Gerone - Perpignan - Montpellier</h4>
+     <br>
+     <br> 
+    <div class="container">
+        <form class="form" id="contact-form" action="//formspree.io/info@mandalavideo.com" method="post">
+            <div class="media-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="nom" class="form-control" placeholder="nom" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="email" required>
+                        </div>
+                    </div>
+                </div>
+                <textarea class="form-control" name="message" placeholder="message" rows="6" required></textarea>
+                <!-- CONFIG -->
+                <input type="hidden" class="is-hidden" type="text" name="_gotcha">
+                <input type="hidden" name="_subject" value="MandalaVideo">
+                <!-- /CONFIG -->
+                <br>
+                <div class="media-footer"> 
+                    <input class="submit btn btn-info btn-fill pull-right" type="submit" value="Envoyer">
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <br><br>
+    <div class="text-center">Carles López Torras - info@mandalavideo.com - (0033) 660 950 492 - © MandalaVideo 2017</div>
+</section> 
+    <div class="modal fade" id="modalVideo">
+    <div class="modal-dialog" style="padding:0;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="close-button">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Promo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Promo</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/promo.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoPromo" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Description
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoPromo" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Materiel de tournage
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoPromo" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Contenu
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoPromo" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Processus
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoPromo">
+                                <p><b>Promo</b> est une offre destinée à tous les types d’entreprises ou personnes qui souhaitent promouvoir leurs activités à travers l’outil vidéo, d’une manière simple, professionnelle et peu coûteuse.</p>
+                                <p><b>Objectif:</b> Fidéliser et augmenter le nombre de clients. Mettre en valeur les facteurs clé de son négoce.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoPromo">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Caméra fullHD</li>
+                                        
+                                            <li>Optiques</li>
+                                        
+                                            <li>Batteries</li>
+                                        
+                                            <li>Cartes mémoire</li>
+                                        
+                                            <li>Trépied</li>
+                                        
+                                            <li>Monopied</li>
+                                        
+                                            <li>Microphone</li>
+                                        
+                                            <li>Steadycam</li>
+                                        
+                                            <li>Slider</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoPromo">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Images de la principale activité de l’entreprise.</li>
+                                    
+                                        <li>Chanson spécifique libre de droits.</li>
+                                    
+                                        <li>Graphisme basique (titre, d’1 à 5 textes informatifs).</li>
+                                    
+                                        <li>Logotype et données de l’entreprise (adresse, téléphone, site web…).</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoPromo">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptation des termes et conditions de l’offre. Signature du contrat.</li>
+                                    
+                                        <li>Visite au client: définition de l’idée, objectif, cible, repérages, réception du matériel numérique (logotypes en haute qualité, textes, polices, etc).</li>
+                                    
+                                        <li>Plan de tournage, préparation du matériel, découpage technique.</li>
+                                    
+                                        <li>Tournage. 2 journées (sous réserve de modification selon facteurs externes)</li>
+                                    
+                                        <li>Montage. Correction de couleur et graphisme basique.</li>
+                                    
+                                        <li>Livraison par courrier ordinaire en clé usb + envoie numérique. Exportation en formats adaptés pour le téléchargement sur les plateformes youtube, vimeo, facebook.</li>
+                                    
+                                        <li>Entrega por correo ordinario en llave usb + envío digital. Exportaciones en formatos adecuados para su subida a plataformas como youtube, vimeo o facebook.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Real" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Real Estate</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/bienes.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoReal" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Description
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoReal" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Materiel de tournage
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoReal" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Contenu
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoReal" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Processus
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoReal">
+                                <p><b>Real Estate</b> est une offre crée pour tous les types d’agences immobilières qui souhaitent faciliter la vente ou la location d’un immeuble à travers l’outil vidéo, d’une façon dynamique et descriptive.</p>
+                                <p><b>Objectif:</b> Placer l’acheteur/loueur dans l’espace offert. Amplifier l’expérience de découverte, détail et perception de l’endroit. Motiver l’intérêt des visites, achat ou location de leurs offres.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoReal">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Caméra fullHD</li>
+                                        
+                                            <li>Optiques</li>
+                                        
+                                            <li>Batteries</li>
+                                        
+                                            <li>Cartes mémoire</li>
+                                        
+                                            <li>Trépied</li>
+                                        
+                                            <li>Monopied</li>
+                                        
+                                            <li>Microphone</li>
+                                        
+                                            <li>Steadycam</li>
+                                        
+                                            <li>Slider</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoReal">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Images de l’espace à vendre/louer.</li>
+                                    
+                                        <li>Chanson spécifique libre de droits.</li>
+                                    
+                                        <li>Graphisme basique (titre, d’1 à 5 textes informatives).</li>
+                                    
+                                        <li>Logotype et données de l’entreprise (adresse, téléphone, site web…).</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoReal">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptation des termes et conditions de l’offre. Signature du contrat.</li>
+                                    
+                                        <li>Visite au client : définition de l’idée, repérages, réception du matériel numérique (logotypes en haute qualité, textes, polices, etc).</li>
+                                    
+                                        <li>Plan de tournage, préparation du matériel, découpage technique.</li>
+                                    
+                                        <li>Tournage. 1 journée (sous réserve de modification selon facteurs externes)</li>
+                                    
+                                        <li>Montage. Correction de couleur et graphisme basique.</li>
+                                    
+                                        <li>Livraison par courrier ordinaire en clé usb + envoie numérique. Exportation en formats adaptés pour le téléchargement sur les plateformes youtube, vimeo, facebook.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Hotel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Hotel</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/hotel.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoHotel" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Description
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoHotel" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Materiel de tournage
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoHotel" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Contenu
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoHotel" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Processus
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoHotel">
+                                <p><b>Hotel</b> est une offre dédiée aux chaînes hôtelières qui souhaitent créer une image globale propre à travers l’outil vidéo. Un service avec deux résultats.<br> 1- La production d’une vidéo pour chaque hôtel sélectionné.<br> 2- Un montage combinant chaque vidéo pour en faire une vidéo globale.<br></p>
+                                <p><b>Objectif:</b> D’un coté promouvoir chacun des hôtels choisis de la chaîne. De l’autre, faire la publicité de l’envergure de la chaîne hôtelière dans une seule vidéo.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoHotel">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Caméra fullHD</li>
+                                        
+                                            <li>Optiques</li>
+                                        
+                                            <li>Batteries</li>
+                                        
+                                            <li>Cartes mémoire</li>
+                                        
+                                            <li>Trépied</li>
+                                        
+                                            <li>Monopied</li>
+                                        
+                                            <li>Microphone</li>
+                                        
+                                            <li>Steadycam</li>
+                                        
+                                            <li>Slider</li>
+                                        
+                                            <li>Drone (selon possibilités logistiques).</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoHotel">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Pour les vidéos de chaque hôtel : images extérieures (façade, piscine, jardins, etc) et images intérieures (hall, restaurants, chambres, etc).</li>
+                                    
+                                        <li>Pour la vidéo principale (chaîne hôtelière) : mélange des images filmées dans chaque hôtel.</li>
+                                    
+                                        <li>Chanson spécifique libre de droits. Graphisme basique (d’1 à 5 textes informatifs). Logotype et données de l’entreprise (adresse, téléphone, site web…).</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoHotel">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptation des termes et conditions de l’offre. Signature du contrat.</li>
+                                    
+                                        <li>Visite au client : définition et choix des hôtels, repérages et planning, réception du matériel numérique (logotypes en haute qualité, textes, polices, etc).</li>
+                                    
+                                        <li>Plan de tournage, préparation du matériel, découpage technique.</li>
+                                    
+                                        <li>Tournage. 2 journées pour chaque hôtel (sous réserve de modification selon facteurs externes)</li>
+                                    
+                                        <li>Montage. Correction de couleur et graphisme basique.</li>
+                                    
+                                        <li>Livraison par courrier ordinaire en clé usb + envoie numérique. Exportation à formats adaptés pour le téléchargement sur les plateformes youtube, vimeo, facebook.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Outdoors" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Outdoors</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/outdoors.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoOutdoors" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Description
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoOutdoors" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Materiel de tournage
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoOutdoors" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Contenu
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoOutdoors" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Processus
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoOutdoors">
+                                <p><b>Outdoors</b> est une offre conçue pour toute personne qui aime et souhaite partager sa passion pour le sport à travers la vidéo. <br><br><br></p>
+                                <p><b>Objectif:</b> Raconter votre histoire, vos défis ou les compétences acquises sont quelques bonnes raisons pour profiter de cette offre. Utilisez-la comme cadeau pour votre partenaire, pour un ami ou pour vous même.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoOutdoors">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Caméra fullHD</li>
+                                        
+                                            <li>Optiques</li>
+                                        
+                                            <li>Batteries</li>
+                                        
+                                            <li>Cartes mémoire</li>
+                                        
+                                            <li>Trépied</li>
+                                        
+                                            <li>Monopied</li>
+                                        
+                                            <li>Microphone</li>
+                                        
+                                            <li>Steadycam</li>
+                                        
+                                            <li>Drone (selon possibilités logistiques).</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoOutdoors">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Images de l’activité sportive.</li>
+                                    
+                                        <li>Chanson spécifique libre de droits. </li>
+                                    
+                                        <li>Graphisme basique (titre).</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoOutdoors">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptation des termes et conditions de l’offre. Signature du contrat.</li>
+                                    
+                                        <li>Visite au client : définition de l’idée et planning.</li>
+                                    
+                                        <li>Plan de tournage, préparation du matériel, découpage technique.</li>
+                                    
+                                        <li>Tournage. 2 journées (sous réserve de modification selon facteurs externes)</li>
+                                    
+                                        <li>Montage. Correction de couleur et graphisme basique.</li>
+                                    
+                                        <li>Livraison par courrier ordinaire en clé usb + envoie numérique. Exportation à formats adaptés pour le téléchargement sur les plateformes youtube, vimeo, facebook.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Fénix" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Phénix</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/fenix.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoFénix" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Description
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoFénix" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Materiel de tournage
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoFénix" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Contenu
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoFénix" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Processus
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoFénix">
+                                <p><b>Phénix</b> est une offre destinée à toute personne qui souhaite avoir une photographie de sa propriété depuis le ciel. <br><br><br></p>
+                                <p><b>Objectif:</b> Photographier votre propriété depuis une certaine hauteur grâce au drone pour pouvoir obtenir des images de la maison et du terrain, toujours en cherchant la meilleure position. </p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoFénix">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Drone</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoFénix">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>1 photographie de votre propriété imprimée de haute qualité (format A3) et encadrée</li>
+                                    
+                                        <li>5 photographies extra en format numérique.</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoFénix">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptation des termes et conditions de l’offre. Signature du contrat.</li>
+                                    
+                                        <li>Visite au client : vérification logistique, repérage de la propriété.</li>
+                                    
+                                        <li>Tournage. 1/2 journée (sous réserve de modification selon facteurs externes)</li>
+                                    
+                                        <li>Livraison par courrier ordinaire en clé usb + envoie numérique.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--  jQuery and Bootstrap core files    --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
+<script src="/assets/js/covervid.min.js" type="text/javascript"></script>
+
+<script src="/assets/js/video.js" type="text/javascript"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js" type="text/javascript"></script>
+
+<!--  Plugins -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYTL6FQWLRjamxGKf6LtOFpwwnSQIkz3g"></script>
+
+<script src="/assets/js/modal-header.js" type="text/javascript"></script>
+
+<script src="/assets/js/theme.js"></script>
+
+<script src="/assets/js/demo.js"></script> 
+<script src="/assets/js/citation.js"></script> 
+<script src="/assets/js/portfolio.js"></script>  
+ 
+
+
+<script type="text/javascript">
+    coverVid(document.querySelector('.masthead-video'), 640, 360);
+    $().ready(function () {
+        $(window).on('scroll', gsdk.checkScrollForTransparentNavbar);
+    });
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script>
+
+  </body>
+</html>
