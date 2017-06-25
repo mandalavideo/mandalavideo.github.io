@@ -1,5 +1,82 @@
 <html>
   <head>
-    <META http-equiv="refresh" content="0;URL=/es/index.html">
+    <noscript>
+      <meta http-equiv="refresh" content="0; URL=/es/index.html"/>
+    </noscript>
+    <script type="text/javascript">
+      if(getCookie('lang') != null){
+        window.location.replace("/"+getCookie('lang') +"/index.html");
+      }
+      else{
+        var userLang = navigator.language || navigator.userLanguage; 
+        switch (userLang) {
+          case 'fr':
+            window.location.replace("/fr/index.html");
+            break;
+          case 'es':
+            window.location.replace("/es/index.html");
+            break;
+          case 'ca':
+            window.location.replace("/ca/index.html");
+            break;
+          case 'en':
+            window.location.replace("/en/index.html");
+            break;
+          default:
+            window.location.replace("/es/index.html");
+            break;
+        }
+      }
+
+
+
+// Set cookie.
+function setCookie(name, value, expires, path, domain, secure) {
+  document.cookie = name + "=" + escape(value) +
+    ((expires) ? "; expires=" + expires : "") +
+    ((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+    ((secure) ? "; secure" : "");
+}
+
+
+/*
+// Set cookie for 1 hour:
+date = new Date();
+date.setHours(date.getHours() + 24);
+setCookie('lang', 'fr', date.toUTCString());
+*/
+
+// Get cookie.
+function getCookie(name) {
+  var cookie = " " + document.cookie;
+  var search = " " + name + "=";
+  var setStr = null;
+  var offset = 0;
+  var end = 0;
+  if (cookie.length > 0) {
+    offset = cookie.indexOf(search);
+    if (offset != -1) {
+      offset += search.length;
+      end = cookie.indexOf(";", offset)
+      if (end == -1) {
+        end = cookie.length;
+      }
+      setStr = unescape(cookie.substring(offset, end));
+    }
+  }
+  return(setStr);
+}
+
+
+
+// Delete cookie.
+function delCookie(name) {
+  document.cookie = name + "=" + "; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+}
+
+
+
+    </script>
   </head>
 </html>
