@@ -1,31 +1,1467 @@
----
-layout: default
-ref: index
-lang: ca
----
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="home">
- 
-  <h1 class="page-heading">Articles</h1>
+  <title>MANDALAVIDEO | Productora audiovisual</title> 
+  <meta name="description" content="Empresa de vídeo professional. Produccions úniques i sorprenents. Ofertes exclusives a preus accessibles. Varietat de serveis. A Barcelona, Girona, Perpignan i Montpellier.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-{% assign cookies=site.cookies | where:"lang", page.lang %}
-{% for cookie in cookies %}
-    {{cookie.title}}
-{% endfor %}
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://mandalavideo.com/assets/images/facebook.jpg"/>
+  <metaproperty="og:title" content="MANDALAVIDEO | Productora audiovisual"/>
+  <meta property="og:description" content="Empresa de vídeo professional. Produccions úniques i sorprenents. Ofertes exclusives a preus accessibles. Varietat de serveis. A Barcelona, Girona, Perpignan i Montpellier."/>
 
-  <ul class="post-list">
-    {% assign posts=site.posts | where:"lang", page.lang %}
-    {% for post in posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.css" rel="stylesheet" />
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <link rel="stylesheet" href="/css/main.css">
 
-  <p class="rss-subscribe">suivre le <a href="{{ "/flux.xml" | prepend: site.baseurl }}">flux RSS</a></p>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu|Montserrat:400,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+
+  <body>
+    <section class="masthead">
+    <video class="masthead-video" autoplay loop muted poster="/assets/images/header/poster.jpg">
+        <source src="/assets/video/header_bg.mp4" type="video/mp4">
+        <source src="/assets/video/header_bg.webm" type="video/webm">
+    </video>
+    <div class="masthead-overlay"></div>
+    <div class="masthead-arrow"></div>
+
+    <nav class="navbar navbar-ct-black navbar-transparent navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menu-toggle" type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar bar1"></span>
+              <span class="icon-bar bar2"></span>
+              <span class="icon-bar bar3"></span>
+            </button>
+                <a class="navbar-brand" href="">mandala<b>video</b></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li>
+                        <a href="#service">Serveis</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#prestaop">Prestació Op</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#offres">Ofertes</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#portfolioo">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#info">Info</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#aviss">Opinions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#contact">Contacte</a>
+                    </li>
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+    
+        <li>
+            <a href="https://www.facebook.com/productoramandalavideo/">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+        </li>   
+    
+        <li>
+            <a href="https://www.instagram.com/mandalavideo/">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>   
+    
+        <li>
+            <a href="https://vimeo.com/user3161025">
+                <i class="fa fa-vimeo"></i>
+            </a>
+        </li>   
+    
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" aria-expanded="false">
+            
+                 CAT
+              
+
+        <b class="caret"></b>
+        </a>
+
+        <ul class="dropdown-menu">
+            
+                <li><a href="/en/index.html?lang=en">EN</a></li>
+            
+                <li><a href="/es/index.html?lang=es">ES</a></li>
+            
+                <li><a href="/fr/index.html?lang=fr">FR</a></li>
+            
+        </ul>
+
+    </li> 
+</ul>  
+            </div>
+
+        </div>
+
+    </nav> 
+    <div class="motto">
+         Veure el showreel <br>
+        <svg version="1.1" class="modalButton" id="play" data-toggle="modal" data-src="https://www.youtube.com/embed/cJg5NWu3fUc?autoplay=1" data-width="960"
+            data-height="541" data-target="#modalVideo" data-video-fullscreen=""  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            height="100px" width="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+            <path class="stroke-solid" fill="none" stroke="white" d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+    C97.3,23.7,75.7,2.3,49.9,2.5" />
+            <path class="stroke-dotted" fill="none" stroke="white" d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+    C97.3,23.7,75.7,2.3,49.9,2.5" />
+            <path class="icon" fill="white" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+            />
+        </svg>
+
+     
+</section>
+    <div class="section citation section-gray">
+    
+        <h3 class="motivation">El vídeo generarà les 3/4 parts del trànsit web els propers anys.</h3>
+    
+        <h3 class="motivation">500 milions d'usuaris Facebook miren cada dia 8000 milions de vídeos.</h3>
+    
+        <h3 class="motivation">Es pujen més vídeos a internet en un mes que la suma de produccions televisives en 30 anys.</h3>
+    
+</div>   
+    <div class="section intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                 <h2 class="section-title">mandala<b>video</b></h2><br>
+                <p>El Mandala és la representació simbòlica del cosmos. Amb la seva forma concèntrica, suggereix la idea de perfecció i evoca el retorn dels cicles de la natura.</p> <p>És abans que rés un cosmograma, una projecció geomètrica de l'univers sençer en el seu esquema esencial.</p> <p><b>Amb aquesta base, Mandala Video col·loca la teva idea al centre d'aquest remolí d'elements, colors i sons per oferir-te un resultat sorprenent.</b></p>
+             </div>
+            <div class="col-md-3">
+                <img src="/assets/images/logo_noir.png" alt="">
+            </div>
+        </div>
+    </div>
+</div> 
+    <div class="section">
+    <div class="container">
+        <h2 class="section-title" id="service">Serveis</h2>
+        <div class="services">
+            <div class="row">
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/sportif_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/sportif_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Promociona una marca o sponsor, personatge públic, novetats, events, reptes, etc. Adequat per a esportistes, marques/sponsors, empreses de servei d'oci o centres de tecnificació.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Esportiu</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/promotionel_mini.jpg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/promotionel_mini.jpg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Per la promoció i publicitat del teu negoci. Des de models estàndar fins a produccions innovadores i creatives. Enfocat a mitjanes i grans empreses, hotels i campings, restaurants, oficines de turisme, immobiliàries…
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Promocional</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/clips_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/clips_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Ideal per la venda o promoció d'una cançó. Reforça la imatge de l'artista o grup. Enfocat a músics i bandes, companyies d'espectacles…
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Videoclip</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/lifestyle_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/lifestyle_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                “Lifestyle” es un servei exclusiu per un públic molt específic. Ideal per a persones o parelles d'entre 20 i 40 anys, l'objectiu es retratar una porció del seu estil de vida en el moment de màxim esplendor. 
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">“Lifestyle”</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/voyage_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/voyage_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Adreçat a agències i webs de viatge, aquest servei promociona les destinacions a través del vídeo, ja sigui per augmentar les ventes dels seus llibres i publicacions com per guanyar possibles clients.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Viatge</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/teaser_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/teaser_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Utilitza el format Teaser per la venda/promoció d'un producte o servei. De curta durada  (entre 20 i 45”). Ideal per la difusió a través de xarxes socials.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Teaser</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/docu_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/docu_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Per expressar un aspecte de la realitat a través del vídeo, aquest servei abasta les més variades modalitats, depenent del tema i objetiu.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Documental</h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/personalise_mini.jpeg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/personalise_mini.jpeg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                No has trobat el servei que necessites? Tens una demanda particular? Contacta per compartir les teves idees, buscarem les millors opcions per a la seva realització.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Personalitzat</h1>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="container prestaop">
+        <h2 class="section-title" id="prestaop">Prestació Operador</h2>
+        <div class="services"> 
+            <div class="row"> 
+              
+                <div class="col-md-6">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/drone.jpg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/drone.jpg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Les imatges aèries et permeten accedir a indrets inaccessibles i crear nous discursos. Ideal per qualsevol tipus de producció de vídeo. Capta imatges aèries professionals amb total seguretat. Un pilot qualificat amb experiència en rodatges t'informarà de les possibilitats logístiques i creatives per al teu projecte.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Operador de <b>dron</b></h1>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-6">
+                    <div class="card card-background">
+                        <div class="image" style="background-image: url('/assets/images/service/camera.jpg'); background-position: center center; background-size: cover;">
+                            <img src="/assets/images/service/camera.jpg" alt="" style="display: none;">
+                        </div>
+                        <div class="filter">
+                            <p> 
+                                Aprofita les competències d'un operador de càmera en els casos on necessitis externalitzar o ampliar el teu equip de rodatge. Per qualsevol tipus de producció, amb material propi i totalment autònom. Expert en steadycam i rodatges en exteriors. Aquest servei s'ofereix per mitja jornada o jornada completa.
+                            </p>
+                        </div>
+                        <div class="content text-center">
+                            <h3 class="title">Operador de <b>càmera</b></h1>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+
 
 </div>
+    <div class="section section-gray" style="padding-bottom:0;">
+    <div class="container">
+        <h2 class="section-title" id="offres">Ofertes promocionals</h2> 
+        <div class="offres">
+            <div class="row owl-carousel owl-theme"  id="price-cards" >
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Promo</h6>
+                            <h1 class="price">
+                                <small>€</small>1450
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Promo</b> s'ha creat per tot tipus d'empreses, entitats o persones que desitgen promocionar la seva activitat a través del vídeo, d'una forma senzilla, professional i amb un baix cost.
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Rodatge</b> 2 jornades
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Entrega</b> 10 dies
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durada</b> 3' (orientatiu)
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Promo">
+                                Llegir més
+                            </button>
+                        </div>
+                    </div>
+                
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Real Estate</h6>
+                            <h1 class="price">
+                                <small>€</small>650
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Real Estate</b> és una oferta pensada per a agències immobiliàries que desitgen facilitar la venda d'un immoble a través d'un vídeo dinàmic i descriptiu.<br><br>
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Rodatge</b> 1 jornada
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Entrega</b> 10 dies
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durada</b> 1'30 (orientatiu)
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Real">
+                                Llegir més
+                            </button>
+                        </div>
+                    </div>
+                
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Hotel</h6>
+                            <h1 class="price">
+                                <small>€</small>750
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Hotel</b> és una proposta enfocada a cadenes hoteleres que volen crear una imatge global pròpia a través del vídeo. Un servei amb dos resultats.<br><br>
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Rodatge</b> 2 jornades
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Entrega</b> A definir
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durada</b> 1'30/ 3'
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Hotel">
+                                Llegir més
+                            </button>
+                        </div>
+                    </div>
+                
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Outdoors</h6>
+                            <h1 class="price">
+                                <small>€</small>850
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Outdoors</b> és l'opció ideal per a tota persona que desitgi compartir la seva passió per l'esport a través del vídeo. <br><br><br>
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Rodatge</b> 2 jornades
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Entrega</b> A definir
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durada</b> 2'30 (orientatiu)
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Outdoors">
+                                Llegir més
+                            </button>
+                        </div>
+                    </div>
+                
+                
+         
+                    <div class="card card-price">
+                        <div class="content"> 
+                            <h6 class="category">Fènix</h6>
+                            <h1 class="price">
+                                <small>€</small>250
+                            </h1>
+                            <ul class="list-unstyled list-lines">
+                                <li>
+                                    <b>Fènix</b>  és una proposta fotogràfica adreçada a qualsevol persona que desitgi tenir imatges de la seva propietat des de l'aire. <br><br><br>
+                                </li> 
+                                <li>
+                                    <i class="fa fa-film"> </i><b>Rodatge</b> 1/2 jornada
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-o"></i> <b>Entrega</b> Entre 5 i 10 dies.
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> <b>Durada</b> --
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="footer">
+                            <button type="button" class="btn btn-info btn-fill btn-block" data-toggle="modal" data-target="#Fènix">
+                                Llegir més
+                            </button>
+                        </div>
+                    </div>
+                
+                
+            </div>
+        </div>
+        <h2 class="section-title" id="portfolioo">Portfolio</h2>
+    </div>
+</div>  
+    <div class="owl-carousel" id="portfolio"></div>
+   
+    <div class="section">
+    <div class="container">
+        <h2 class="section-title" id="info">Info</h2>
+        <div class="row">
+
+            <div class="col-md-7">
+                <div class="owl-carousel owl-theme" id="infoo">
+                    <div class="img-container item" style="margin-bottom:10px;">
+                    <img src="/assets/images/carles/1.jpg" alt="Rounded Image" class="img-rounded">
+                    </div>
+                    <div class="img-container item" style="margin-bottom:10px;">
+                        <img src="/assets/images/carles/2.jpg" alt="Rounded Image" class="img-rounded">
+                    </div>
+                    <div class="img-container item" style="margin-bottom:10px;">
+                        <img src="/assets/images/carles/3.jpg" alt="Rounded Image" class="img-rounded">
+                    </div>
+                    <div class="img-container item" style="margin-bottom:10px;">
+                        <img src="/assets/images/carles/4.jpg" alt="Rounded Image" class="img-rounded">
+                    </div>
+                </div>
+    <div class="space-50"></div> 
+            </div> 
+            
+            <div class="col-md-5">
+                <h2 class="text-center">Carles López</h2>
+                <hr>
+                <p>Realitzador - Creatiu. Apassionat pel movimient i la harmonia. Multilingüe (Català, espanyol, francès i anglès). Fascinat pels esports extrems, la natura, el cinema, la música i la filosofia.</p> <p>Experiència en el desenvolupament de projectes audiovisuals per a tot tipus d'empreses, entitats i particulars. Present en totes les fases de la producció.</p>
+             </div>
+        </div>
+    </div>
+
+<section class="section section-gray">
+    <div class="container info">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="space-50"></div>
+                <h3>Col·laboradors</h3>
+                <p>Treball en col·laboració amb grans professionals del sector : </p>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Il·lustració - Gràfics d'animació i moviment - VFX - So i BSO (quarantados.com)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/0.jpg" alt="Quarantados">
+                            <h4 class="title">Quarantados</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Realitzador - DOP (inbluefilms.com)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/1.jpg" alt="Martin <br>Gonzalez">
+                            <h4 class="title">Martin <br>Gonzalez</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Realitzador - Fotògraf (paulopez.es)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/2.jpg" alt="Pau <br>Lopez">
+                            <h4 class="title">Pau <br>Lopez</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Fotògraf (thibaut-marot.fr)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/3.jpg" alt="Thibaut <br>Marot">
+                            <h4 class="title">Thibaut <br>Marot</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Pilot de dron - Responsable tècnic (hemav.com)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/4.jpg" alt="Pau <br>Mateo">
+                            <h4 class="title">Pau <br>Mateo</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Realitzador - Pilot de dron - Operador">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/5.jpg" alt="Oscar <br>Mendoza">
+                            <h4 class="title">Oscar <br>Mendoza</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Realitzador - Operador (nor-b.net)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/6.jpg" alt="Norbe <br>Fernandez">
+                            <h4 class="title">Norbe <br>Fernandez</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Director artístic - Comunicació">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/7.jpg" alt="Xavi <br>Oribe">
+                            <h4 class="title">Xavi <br>Oribe</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Realitzadora - Documentalista">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/8.jpg" alt="Noémie <br>Roche">
+                            <h4 class="title">Noémie <br>Roche</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div class="card card-user card-plain">
+                    <div class="image"></div>
+                    <div class="content" data-toggle="tooltip" data-placement="top" title="Realitzador - Documentalista - Operador (bitakorafilms.com)">
+                        <div class="author">
+                            <img class="avatar border-gray" src="/assets/images/info/9.jpg" alt="Xavier <br>Sureda">
+                            <h4 class="title">Xavier <br>Sureda</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+
+</div>
+</div> 
+    <div class="container">
+    <h2 class="section-title" id="aviss">Opinions de clients</h2>
+    <div class="owl-carousel owl-theme" id="avis">
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/etiennehanneforth.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>Nosaltres (Nagel-Group) i el Sr. López hem tingut una cooperació professional en els últims anys. Voldria destacar el professionalisme i flexibilitat del Sr. Lopez en cada ocasió.</p>
+                        <small><b>Etienne Hanneford</b> (Key Account Manager Nagel-group)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/ariadnaferrer.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>Gent que vulgui traballar n'hi ha molta. Gent disposada a trabajar ja no n'hi ha tanta i la diferència és abismal. En Carles és dels segons i es nota molt quan, en casos com el nostre, hi ha la mar pel mig.</p>
+                        <small><b>Ariadna Ferrer</b> (Coordinadora / Editora Arrela)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/guillemsalles.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>Carles es un professional conscienciós, aplicat i talentós. El seu sentit de l'escolta al cliente, la posada en escena i el storytelling completen a la perfecció la seva tècnica en direcció de fotografia, fent la seva realització de vídeo impactant i dinàmica.</p>
+                        <small><b>Guillem Salles</b> (Cap de projecte e-learning Programa MIRO)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/martavilar.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>A en Carles no el coneixia. Va ser un vídeo seu qui me'l va prensentar. Un dia Facebook em va plantar el vídeo “La Cauna” i vaig dir: “quan necessiti gravar algun event Climbyoga, el seu propietari serà qui el faci. I així va ser, va acceptar encantat i es va veure involucrat en un projecte conjuntament amb el gran Chris Sharma (Siurana Workshop). No sols va estar a l'alçada sinó que el seu estil, sens dubte, va quedar reflexat en el resultat final. Confieu en ell i els vostres vídeos no fallaran, disfrutareu!</p>
+                        <small><b>Marta Vilar</b> (Comunitat Climbyoga / Projecte Pinkmama)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="item" style="margin-top:20px; padding: 0 45px;">
+            <blockquote>
+                <div class="row"> 
+                    <div class="col-sm-3 text-center">
+                        <img class="avatar img-circle border-gray" src="/assets/images/avis/alexisvillar.jpg" style="width: 200px;height:200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p><b>- Projecte Sinapsis.</b><br> Definitivament el projecte va ser producte d'una ambició mútua per aconseguir les millors imatges durant el rodatge. El que més destacaria és que sempre va estar disposat a donar el millor per la seva part, amb una magnífica organització amb el mapa de localitzacions i permisos de gravació. Per suposat, vaig quedar sorprès amb la qualitat del treball de l'edició de vídeo. La suma de mínims detalls el fan perfecte. <br><b>- Paleotraining Banyoles.</b><br> Necessitavem imatges que reflectissin una forta relació entre el moviment de l'èsser humà i la natura. Ens vam deixar guiar durant 5 hores per les seves propostes, per plasmar en fotografia el que tan sols era una imatge a la nostra ment. El resultat va ser espectacular. Varies de les imatges s'estan utilitzant per part de la marca per adornar l'app mòbil iPaleo que utilitzen usuaris de tot el món.</p>
+                        <small><b>Alexis Villar</b> (Director Entrenament Funcional / Paleotraining Banyoles)</small>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        
+    </div>
+ </div> 
+    <div class="container">
+    <div class="owl-carousel owl-theme" id="client">
+        
+            <div>
+                <img src="/assets/images/client/exp/sharma.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/paleo_training.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/nagel_group.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/delbondio.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/grimper.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/entrenament_funcional.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/miro.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/climbyoga.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/upvd.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/natura_loisirs.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/perishable_center.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/armangue.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/custodia_agraria.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/gob_menorca.png" alt="">
+            </div>
+        
+            <div>
+                <img src="/assets/images/client/exp/iaden.png" alt="">
+            </div>
+        
+    </div>
+</div>
+    <section class="section section-gray">
+    <div class="container">
+        <h2 class="section-title" id="contact">Contacte</h2>
+        <br>
+        <br>  
+    </div> 
+    <div id="map"></div>
+    <h4 class="text-center">Barcelona - Girona - Perpignan - Montpellier</h4>
+     <br>
+     <br> 
+    <div class="container">
+        <form class="form" id="contact-form" action="//formspree.io/info@mandalavideo.com" method="post">
+            <div class="media-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="nom" class="form-control" placeholder="nom i cognoms" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="email" required>
+                        </div>
+                    </div>
+                </div>
+                <textarea class="form-control" name="message" placeholder="missatge" rows="6" required></textarea>
+                <!-- CONFIG -->
+                <input type="hidden" class="is-hidden" type="text" name="_gotcha">
+                <input type="hidden" name="_subject" value="MandalaVideo">
+                <!-- /CONFIG -->
+                <br>
+                <div class="media-footer"> 
+                    <input class="submit btn btn-info btn-fill pull-right" type="submit" value="Enviar">
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <br><br>
+    <div class="text-center">Carles López Torras - info@mandalavideo.com - (0033) 660 950 492 - © MandalaVideo 2017</div>
+</section> 
+    <div class="modal fade" id="modalVideo">
+    <div class="modal-dialog" style="padding:0;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="close-button">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Promo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Promo</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/promo.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoPromo" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Descripció
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoPromo" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Material de rodatge
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoPromo" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Inclou
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoPromo" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Procediment
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoPromo">
+                                <p><b>Promo</b> s'ha creat per tot tipus d'empreses, entitats o persones que desitgen promocionar la seva activitat a través del vídeo, d'una forma senzilla, professional i amb un baix cost. </p>
+                                <p><b>Objectiu:</b> Fidelitzar i augmentar el número de clients. Potenciar els factors clau del teu negoci.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoPromo">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Càmera fullHD</li>
+                                        
+                                            <li>òptiques</li>
+                                        
+                                            <li>bateries</li>
+                                        
+                                            <li>targetes de memòria</li>
+                                        
+                                            <li>trípode</li>
+                                        
+                                            <li>micròfon</li>
+                                        
+                                            <li>monopeu</li>
+                                        
+                                            <li>steadycam</li>
+                                        
+                                            <li>slider</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoPromo">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Imatges de la principal activitat de l'empresa.</li>
+                                    
+                                        <li>Grafisme bàsic (títol, d'1 a 5 textos informatius).</li>
+                                    
+                                        <li>Logotip i dades de l'empresa (direcció, telèfon, web…).</li>
+                                    
+                                        <li>Tema musical específic lliure de drets.</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoPromo">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptació dels termes i condicions de l'oferta. Signatura del contracte.</li>
+                                    
+                                        <li>Visita al client: definició de la idea, objectiu, target, localitzacions, recepció material digital (logotips en alta qualitat, textos, tipografies, etc).</li>
+                                    
+                                        <li>Pla de rodatge, preparació del material, adaptació a guió tècnic.</li>
+                                    
+                                        <li>Rodatge. 2 jornades (subjectes a modificacions per factors externs).</li>
+                                    
+                                        <li>Muntatge. Correcció de color i grafisme bàsic.</li>
+                                    
+                                        <li>Entrega per correu ordinari en clau usb + enviament digital. Exportacions en formats adequats per plataformes com youtube, vimeo o facebook.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Real" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Real Estate</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/bienes.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoReal" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Descripció
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoReal" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Material de rodatge
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoReal" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Inclou
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoReal" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Procediment
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoReal">
+                                <p><b>Real Estate</b> és una oferta pensada per a agències immobiliàries que desitgen facilitar la venda d'un immoble a través d'un vídeo dinàmic i descriptiu.<br></p>
+                                <p><b>Objectiu:</b> Situar al comprador/interessat dins l'espai a vendre. Ampliar l'experiència de descobriment, detall i percepció de l'espai. Motivar l'interès en visites, compra o lloguer de les ofertes.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoReal">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Càmera fullHD</li>
+                                        
+                                            <li>òptiques</li>
+                                        
+                                            <li>bateries</li>
+                                        
+                                            <li>targetes de memòria</li>
+                                        
+                                            <li>trípode</li>
+                                        
+                                            <li>monopeu</li>
+                                        
+                                            <li>micròfon</li>
+                                        
+                                            <li>steadycam</li>
+                                        
+                                            <li>slider</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoReal">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Imatges de l'espai que desitges vendre/llogar.</li>
+                                    
+                                        <li>Tema musical específic lliure de drets. </li>
+                                    
+                                        <li>Grafisme bàsic (títol, d'1 a 5 textos informatius). </li>
+                                    
+                                        <li>Logotip i dades de l'empresa (direcció, telèfon, web…).</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoReal">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptació dels termes i condicions de l'oferta. Signatura del contracte.</li>
+                                    
+                                        <li>Visita al client: definició de la idea, localitzacions, recepció material digital (logotips en alta qualitat, textos, tipografies, etc).</li>
+                                    
+                                        <li>Pla de rodatge, preparació del material, adaptació a guió tècnic.</li>
+                                    
+                                        <li>Rodatge. 1 jornada (subjecta a modificacions per factors externs).</li>
+                                    
+                                        <li>Muntatge. Correcció de color i grafisme bàsic.</li>
+                                    
+                                        <li>Entrega per correu ordinari en clau usb + enviament digital. Exportacions en formats adequats per plataformes com youtube, vimeo o facebook.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Hotel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Hotel</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/hotel.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoHotel" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Descripció
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoHotel" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Material de rodatge
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoHotel" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Inclou
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoHotel" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Procediment
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoHotel">
+                                <p><b>Hotel</b> és una proposta enfocada a cadenes hoteleres que volen crear una imatge global pròpia a través del vídeo. Un servei amb dos resultats.<br> 1- Producció d'un vídeo en cadascún dels hotels escollits.<br> 2- Muntatge combinant cadascún dels vídeos anteriors per crear un vídeo global.</p>
+                                <p><b>Objectiu:</b> D'una banda promocionar cada hotel de la cadena i la seva situació. D'altra banda, publicitar la magnitud de la cadena hotelera en un sol vídeo.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoHotel">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Càmera fullHD</li>
+                                        
+                                            <li>òptiques, bateries</li>
+                                        
+                                            <li>targetes de memòria </li>
+                                        
+                                            <li>trípode</li>
+                                        
+                                            <li>monopeu</li>
+                                        
+                                            <li>micròfon</li>
+                                        
+                                            <li>steadycam</li>
+                                        
+                                            <li>slider</li>
+                                        
+                                            <li>dron (segons possibilitats logístiques)</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoHotel">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Als vídeos de cada hotel: imatges exteriors (façana, piscina, jardins, etc) i imatges interiors (hall, restaurants, habitacions, etc).</li>
+                                    
+                                        <li>Al vídeo general (cadena hotelera): barreja de les imatges realitzades en cada hotel.</li>
+                                    
+                                        <li>Tema musical específic lliure de drets. Grafisme bàsic (d'1 a 5 textos informatius).</li>
+                                    
+                                        <li>Logotip i dades de l'empresa (direcció, telèfon, web…).</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoHotel">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptació dels termes i condicions de l'oferta. Signatura del contracte.</li>
+                                    
+                                        <li>Visita al client: definició dels hotels, localitzacions i planning, recepció material digital (logotips en alta qualitat, textos, tipografies, etc).</li>
+                                    
+                                        <li>Pla de rodaje, preparació del material, adaptació a guió tècnic.</li>
+                                    
+                                        <li>Rodatge. 2 jornades per hotel (subjectes a modificacions per factors externs).</li>
+                                    
+                                        <li>Muntatge. Correcció de color i grafisme bàsic.</li>
+                                    
+                                        <li>Entrega per correu ordinari en clau usb + enviament digital. Exportacions en formats adequats per plataformes com youtube, vimeo o facebook.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Outdoors" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Outdoors</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/outdoors.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoOutdoors" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Descripció
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoOutdoors" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Material de rodatge
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoOutdoors" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Inclou
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoOutdoors" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Procediment
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoOutdoors">
+                                <p><b>Outdoors</b> és l'opció ideal per a tota persona que desitgi compartir la seva passió per l'esport a través del vídeo. <br></p>
+                                <p><b>Objectiu:</b> Explicar la teva història, els teus reptes o competències adquirides són algunes bones raons per aprofitar aquesta oferta. Se sol utilitzar com regal a la parella, a un amic o per un mateix.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoOutdoors">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Càmera fullHD</li>
+                                        
+                                            <li>òptiques</li>
+                                        
+                                            <li>bateries</li>
+                                        
+                                            <li>targetes de memòria</li>
+                                        
+                                            <li>trípode</li>
+                                        
+                                            <li>monopeu</li>
+                                        
+                                            <li>micròfon</li>
+                                        
+                                            <li>steadycam</li>
+                                        
+                                            <li>slider</li>
+                                        
+                                            <li>dron (segons possibilitats logístiques)</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoOutdoors">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>imatges de l'activitat esportiva. </li>
+                                    
+                                        <li>Tema musical específic lliure de drets. </li>
+                                    
+                                        <li>Grafisme bàsic (títol).</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoOutdoors">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptació dels termes i condicions de l'oferta. Signatura del contracte.</li>
+                                    
+                                        <li>Visita al client: definició de la idea i planning.</li>
+                                    
+                                        <li>Pla de rodatge, preparació del material, adaptació a guió tècnic.</li>
+                                    
+                                        <li>Rodatge. 2 jornades (subjectes a modificacions per factors externs).</li>
+                                    
+                                        <li>Muntatge. Correcció de color i grafisme bàsic.</li>
+                                    
+                                        <li>Entrega per correu ordinari en clau usb + enviament digital. Exportacions en formats adequats per plataformes com youtube, vimeo o facebook.</li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-offre modal fade" id="Fènix" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Fènix</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row" style="margin-bottom:20px;">
+                   <div class="col-md-12">
+                       <img class="img-rounded img-responsive" src="/assets/images/offre/fenix.jpg" alt="">
+                   </div>
+               </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-stacked nav-icons" role="tablist">
+                            <li class="active">
+                                <a href="#stacked-description-logoFènix" role="tab" data-toggle="tab" aria-expanded="true">
+                                            <i class="fa fa-info-circle"></i><br> Descripció
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-legal-logoFènix" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-camera"></i><br> Material de rodatge
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-help-logoFènix" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-navicon"></i><br> Inclou
+                                        </a>
+                            </li>
+                            <li class="">
+                                <a href="#stacked-process-logoFènix" role="tab" data-toggle="tab" aria-expanded="false">
+                                            <i class="fa fa-spinner"></i><br> Procediment
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="stacked-description-logoFènix">
+                                <p><b>Fènix</b> és una proposta fotogràfica adreçada a qualsevol persona que desitgi tenir imatges de la seva propietat des de l'aire.<br></p>
+                                <p><b>Objectiu:</b> Fotografiar la teva propietat des de certa alçada gràcies a l'ús d'un dron per obtenir imatges de la casa i el terreny, sempre buscant el millor angle.</p>
+                            </div>  
+                            <div class="tab-pane" id="stacked-legal-logoFènix">
+                                <p>
+                                    <ul>
+                                        
+                                            <li>Dron</li>
+                                        
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane" id="stacked-help-logoFènix">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>1 fotografia de la teva casa o propietat impresa en alta qualitat (format A3) i emmarcada.</li>
+                                    
+                                        <li>5 fotografies extres en format digital (enviament digital)</li>
+                                    
+                                </ul>
+                                 </p>
+                            </div>
+                            <div class="tab-pane" id="stacked-process-logoFènix">
+                                 <p>
+                                <ul>
+                                     
+                                        <li>Acceptació dels termes i condicions de la oferta. Signatura del contracte.</li>
+                                    
+                                        <li>Visita al client: comprovació logística, visita del terreny.</li>
+                                    
+                                        <li>Rodatge. 1/2 jornada (subjecta a modificacions per factors externs).</li>
+                                    
+                                        <li>Entrega per correu ordinari + enviament digital. </li>
+                                     
+                                </ul>
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--  jQuery and Bootstrap core files    --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
+<script src="/assets/js/covervid.min.js" type="text/javascript"></script>
+
+<script src="/assets/js/video.js" type="text/javascript"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js" type="text/javascript"></script>
+
+<!--  Plugins -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYTL6FQWLRjamxGKf6LtOFpwwnSQIkz3g"></script>
+
+<script src="/assets/js/modal-header.js" type="text/javascript"></script>
+
+<script src="/assets/js/theme.js"></script>
+
+<script src="/assets/js/demo.js"></script> 
+<script src="/assets/js/citation.js"></script> 
+<script src="/assets/js/portfolio.js"></script>  
+ 
+
+
+<script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-101990887-3', 'auto');
+    ga('send', 'pageview');
+
+    coverVid(document.querySelector('.masthead-video'), 640, 360);
+    $().ready(function () {
+        $(window).on('scroll', gsdk.checkScrollForTransparentNavbar);
+    });
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script>
+
+  </body>
+</html>
