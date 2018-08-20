@@ -187,7 +187,7 @@ var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
 	e.preventDefault();
 	$.ajax({
-		url: '//formspree.io/info@mandalavideo.com',
+		url: 'https://formspree.io/info@mandalavideo.com',
 		method: 'POST',
 		data: $(this).serialize(),
 		dataType: 'json',
