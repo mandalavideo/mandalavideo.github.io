@@ -826,31 +826,11 @@
      <br>
      <br> 
     <div class="container">
-        <form class="form" id="contact-form" action="https://formspree.io/info@mandalavideo.com" method="post">
-            <div class="media-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" name="nom" class="form-control" placeholder="nombre y apellidos" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="email" required>
-                        </div>
-                    </div>
-                </div>
-                <textarea class="form-control" name="message" placeholder="mensaje" rows="6" required></textarea>
-                <!-- CONFIG -->
-                <input type="text" name="_gotcha" style="display:none" />  
-                <input type="hidden" name="_subject" value="MandalaVideo">
-                <!-- /CONFIG -->
-                <br>
-                <div class="media-footer"> 
-                    <input class="submit btn btn-info btn-fill pull-right" type="submit" value="Enviar">
-                </div>
-            </div>
-        </form>
+       <form action="https://formspree.io/info@mandalavideo.com" method="POST">
+        <input type="text" name="name">
+        <input type="email" name="_replyto">
+        <input type="submit" value="Send">
+    </form>
 
     </div>
     <br><br>
