@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prestops on MANDALAVIDEO | Audiovisual production</title>
+    <link>/en/prestop/</link>
+    <description>Recent content in Prestops on MANDALAVIDEO | Audiovisual production</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="/en/prestop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1 - Drone Operator</title>
+      <link>/en/prestop/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/prestop/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2 - Video Operator</title>
+      <link>/en/prestop/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/prestop/2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

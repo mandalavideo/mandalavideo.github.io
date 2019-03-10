@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Avis on MANDALAVIDEO | Production audiovisuelle</title>
+    <link>/fr/avis/</link>
+    <description>Recent content in Avis on MANDALAVIDEO | Production audiovisuelle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    
+	<atom:link href="/fr/avis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1 - Etienne Hanneford</title>
+      <link>/fr/avis/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fr/avis/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2 - Ariadna Ferrer</title>
+      <link>/fr/avis/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fr/avis/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3 - Guillem Salles</title>
+      <link>/fr/avis/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fr/avis/3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4 - Marta Vilar</title>
+      <link>/fr/avis/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fr/avis/4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>5 - Alexis Villar</title>
+      <link>/fr/avis/5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fr/avis/5/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

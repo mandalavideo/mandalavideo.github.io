@@ -1,1 +1,0 @@
-# mandalavideo.github.io

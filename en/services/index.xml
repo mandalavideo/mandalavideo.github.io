@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on MANDALAVIDEO | Audiovisual production</title>
+    <link>/en/services/</link>
+    <description>Recent content in Services on MANDALAVIDEO | Audiovisual production</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="/en/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1 - Sport</title>
+      <link>/en/services/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/services/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2 - Promotional</title>
+      <link>/en/services/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/services/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3 - Music Clip</title>
+      <link>/en/services/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/services/3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4 - Lifestyle</title>
+      <link>/en/services/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/services/4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>5 - Travel</title>
+      <link>/en/services/5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/services/5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>6 - Teaser</title>
+      <link>/en/services/6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/services/6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7 - Documentary</title>
+      <link>/en/services/7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/services/7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>8 - Custom</title>
+      <link>/en/services/8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/services/8/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on MANDALAVIDEO | Productora audiovisual</title>
+    <link>/cat/services/</link>
+    <description>Recent content in Services on MANDALAVIDEO | Productora audiovisual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cat</language>
+    
+	<atom:link href="/cat/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1 - Esportiu</title>
+      <link>/cat/services/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/services/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2 - Promocional</title>
+      <link>/cat/services/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/services/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3 - Videoclip</title>
+      <link>/cat/services/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/services/3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4 - Lifestyle</title>
+      <link>/cat/services/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/services/4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>5 - Viatge</title>
+      <link>/cat/services/5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/services/5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>6 - Teaser</title>
+      <link>/cat/services/6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/services/6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7 - Documental</title>
+      <link>/cat/services/7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/services/7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>8 - Personalitzat</title>
+      <link>/cat/services/8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/services/8/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

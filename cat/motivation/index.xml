@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Motivations on MANDALAVIDEO | Productora audiovisual</title>
+    <link>/cat/motivation/</link>
+    <description>Recent content in Motivations on MANDALAVIDEO | Productora audiovisual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cat</language>
+    
+	<atom:link href="/cat/motivation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1</title>
+      <link>/cat/motivation/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/motivation/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2</title>
+      <link>/cat/motivation/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/motivation/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3</title>
+      <link>/cat/motivation/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cat/motivation/3/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

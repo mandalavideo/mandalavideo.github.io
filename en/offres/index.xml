@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Offres on MANDALAVIDEO | Audiovisual production</title>
+    <link>/en/offres/</link>
+    <description>Recent content in Offres on MANDALAVIDEO | Audiovisual production</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="/en/offres/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1 - Promo</title>
+      <link>/en/offres/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/offres/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2 - Real Estate</title>
+      <link>/en/offres/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/offres/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3 - Hotel</title>
+      <link>/en/offres/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/offres/3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4 - Outdoors</title>
+      <link>/en/offres/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/offres/4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>5 - Phoenix</title>
+      <link>/en/offres/5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/offres/5/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
